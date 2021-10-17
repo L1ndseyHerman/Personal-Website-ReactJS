@@ -1,9 +1,12 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import Wrapper from "./Wrapper";
 
 function App() {
-  return <p>Initial Commit</p>;
+  return (
+    <>
+      <h1>Words</h1>
+      <Wrapper></Wrapper>
+    </>
+  );
 }
 
 export default App;

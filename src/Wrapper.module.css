@@ -1,0 +1,10 @@
+.sky {
+  background-color: cornflowerblue;
+  padding: 1rem;
+}
+.cloud {
+  background-color: white;
+  padding: 15rem;
+  border: 3px solid black;
+  border-radius: 20%;
+}
