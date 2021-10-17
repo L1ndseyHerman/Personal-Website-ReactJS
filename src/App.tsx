@@ -1,12 +1,14 @@
+import React from "react";
 import Wrapper from "./Wrapper";
 
-function App() {
+const App: React.FC = () => {
   return (
-    <>
-      <h1>Words</h1>
-      <Wrapper></Wrapper>
-    </>
+    <div>
+      <Wrapper>
+        <p>Some Other Text</p>
+      </Wrapper>
+    </div>
   );
-}
+};
 
 export default App;

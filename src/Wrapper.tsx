@@ -1,11 +1,12 @@
+import React from "react";
+
 import classes from "./Wrapper.module.css";
 
-const Wrapper = () => {
+const Wrapper: React.FC = (props) => {
   return (
     <div className={classes.sky}>
-      <div className={classes.cloud}>
-        <p>Some text</p>
-      </div>
+      <h1 className={classes.title}>Title</h1>
+      <div className={classes.cloud}>{props.children}</div>
     </div>
   );
 };
