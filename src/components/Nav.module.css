@@ -1,6 +1,17 @@
 .nav {
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-top: 2rem;
-  /*flex-wrap: wrap;*/
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 1rem;
+
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .nav {
+    gap: 1rem;
+  }
 }

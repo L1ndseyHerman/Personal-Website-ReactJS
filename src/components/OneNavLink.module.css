@@ -1,25 +1,8 @@
 .navLink {
-  /*display: inline;*/
-  margin-left: 2rem;
-  margin-bottom: 2rem;
   padding: 1rem;
   background-color: white;
   border: 2px solid black;
   border-radius: 20%;
   text-decoration: none;
   color: black;
-  display: inline-flex;
-  flex-wrap: wrap;
 }
-
-/*@media only screen and (max-width: 1024px) {
-  .navLink {
-    display: block;
-    margin-left: 40%;
-    margin-right: 40%;
-    padding-right: 5rem;
-    padding-top: none;
-    padding-bottom: none;
-    text-align: center;
-  }
-}*/
