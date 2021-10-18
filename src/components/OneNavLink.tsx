@@ -2,7 +2,7 @@ import React from "react";
 
 import { NavLink } from "react-router-dom";
 
-import classes from "./NavLink.module.css";
+import classes from "./OneNavLink.module.css";
 
 const OneNavLink: React.FC<{ text: string; theUrl: string }> = (props) => {
   return (
