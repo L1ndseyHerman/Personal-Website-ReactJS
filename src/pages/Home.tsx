@@ -1,11 +1,55 @@
 import React from "react";
+//  Whoops, <Link /> is for ON-SITE Links only!
+//import { Link } from "react-router-dom";
+import classes from "./Home.module.css";
+
 import Wrapper from "../components/Wrapper";
 
 const Home: React.FC = () => {
   return (
     <div>
       <Wrapper title="Home">
-        <p>Home Text</p>
+        <p>
+          Hi, welcome to my personal website! This website was originally an
+          assignment for a class where I had to use HTML5, CSS3, and Vanilla
+          JavaScript to create a basic website with certain features, such as at
+          least 4 webpages, 1 table, 1 unordered list, 2 selectors
+          (radio-buttons, drop-down list, etc.), 2 animations, 2 external links,
+          and possibly other requirements. I later added a &quot;Fun With
+          JavaScript&quot; page after spending more time learning JavaScript
+          on&nbsp;
+          <a
+            href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/"
+            className={classes.link}
+          >
+            freecodecamp.org
+          </a>
+          . Since I just finished an online React JS course on&nbsp;
+          <a
+            href="https://www.udemy.com/course/react-the-complete-guide-incl-redux/"
+            className={classes.link}
+          >
+            udemy.com
+          </a>
+          , I decided to redo this website in React JS with better CSS as well.
+          My old website can be found here:&nbsp;
+          <a
+            href="https://github.com/L1ndseyHerman/Website-Updates"
+            className={classes.link}
+          >
+            github.com
+          </a>
+          . Also, check out my basic React JS videogame that is a PWA and hosted
+          on AWS Amplify:&nbsp;
+          <a
+            href="https://www.shield-magic-sword.app/"
+            className={classes.link}
+          >
+            shield-magic-sword.app
+          </a>
+          .
+        </p>
+        <p className={classes.updatedPar}>Last updated: 10/18/21</p>
       </Wrapper>
     </div>
   );
