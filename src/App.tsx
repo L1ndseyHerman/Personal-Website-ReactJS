@@ -1,10 +1,10 @@
 import React from "react";
-import Wrapper from "./Wrapper";
+import Wrapper from "./components/Wrapper";
 
 const App: React.FC = () => {
   return (
     <div>
-      <Wrapper>
+      <Wrapper title="Some Title">
         <p>Some Other Text</p>
       </Wrapper>
     </div>
