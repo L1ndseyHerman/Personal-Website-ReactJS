@@ -7,8 +7,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   font-family: Verdana, Arial, Tahoma, sans-serif;
-  /* It seems Verdana doesn't go lighter. */
-  /*font-weight: lighter;*/
 }
 
 code {
