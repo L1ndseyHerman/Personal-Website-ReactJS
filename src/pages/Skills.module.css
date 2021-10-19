@@ -1,13 +1,9 @@
 .ulOuter {
-  margin-left: 35%;
+  display: table;
+  margin-right: auto;
+  margin-left: auto;
   color: black;
 }
 .ulInner {
   color: cornflowerblue;
-}
-
-@media only screen and (max-width: 1024px) {
-  .ulOuter {
-    margin-left: 20%;
-  }
 }
