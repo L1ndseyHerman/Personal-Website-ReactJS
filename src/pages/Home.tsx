@@ -9,7 +9,7 @@ const Home: React.FC = () => {
   return (
     <div>
       <Wrapper title="Home">
-        <p>
+        <p className={classes.par}>
           Hi, welcome to my personal website! This website was originally an
           assignment for a class where I had to use HTML5, CSS3, and Vanilla
           JavaScript to create a basic website with certain features, such as at

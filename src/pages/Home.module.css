@@ -3,5 +3,8 @@
 }
 .updatedPar {
   text-align: center;
-  margin-top: 3em;
+  margin-top: 3rem;
+}
+.par {
+  padding: 2rem;
 }
