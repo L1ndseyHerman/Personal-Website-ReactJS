@@ -14,17 +14,79 @@ const Jobs: React.FC = () => {
   let jobResponsibilities = null;
 
   if (jobNumber === 1) {
-    jobResponsibilities = <p>One</p>;
+    jobResponsibilities = (
+      <ul>
+        <li className={classes.dateLi}>April 2012 - August 2012</li>
+        <li className={classes.otherLi}>Washed dishes</li>
+      </ul>
+    );
   } else if (jobNumber === 2) {
-    jobResponsibilities = <p>Two</p>;
+    jobResponsibilities = (
+      <ul>
+        <li className={classes.dateLi}>October 2012 - October 2013</li>
+        <li className={classes.otherLi}>
+          Prepared food following Pizza Hut&apos;s safety guidelines
+        </li>
+        <li className={classes.otherLi}>Counted change</li>
+      </ul>
+    );
   } else if (jobNumber === 3) {
-    jobResponsibilities = <p>Three</p>;
+    jobResponsibilities = (
+      <ul>
+        <li className={classes.dateLi}>October 2013 - April 2014</li>
+        <li className={classes.otherLi}>
+          Organized and tidied store and dressing-room clothing items, sorting
+          by color and size
+        </li>
+        <li className={classes.otherLi}>
+          Searched through large quantities of items for small but significant
+          errors, such as a bathing suit hanging on the coat display
+        </li>
+      </ul>
+    );
   } else if (jobNumber === 4) {
-    jobResponsibilities = <p>Four</p>;
+    jobResponsibilities = (
+      <ul>
+        <li className={classes.dateLi}>June 2014 - November 2014</li>
+        <li className={classes.otherLi}>Unpaid volunteer position</li>
+        <li className={classes.otherLi}>
+          Scanned paper patient records into Lake Health&apos;s computerized
+          patient database
+        </li>
+      </ul>
+    );
   } else if (jobNumber === 5) {
-    jobResponsibilities = <p>Five</p>;
+    jobResponsibilities = (
+      <ul>
+        <li className={classes.dateLi}>November 2014 - October 2020</li>
+        <li className={classes.otherLi}>
+          Scaned and keyed grocery data into Giant Eagle&apos;s Java cashiering
+          program at a rate of &ge; 13 items/minute
+        </li>
+        <li className={classes.otherLi}>
+          Instructed new shoppers how to use chip readers, Apple Pay, and the
+          Giant Eagle app
+        </li>
+        <li className={classes.otherLi}>
+          Provided excellent customer service, receiving &ge; 2 positive online
+          survey reviews
+        </li>
+      </ul>
+    );
   } else if (jobNumber === 6) {
-    jobResponsibilities = <p>Six</p>;
+    jobResponsibilities = (
+      <ul>
+        <li className={classes.dateLi}>November 2020 - February 2021</li>
+        <li className={classes.otherLi}>
+          Created procedures in Delphi, such one to rename and/or delete all
+          duplicate files in a folder
+        </li>
+        <li className={classes.otherLi}>
+          Performed CRUD operations on a MSSQL database using the FireDAC
+          library
+        </li>
+      </ul>
+    );
   }
 
   return (
@@ -96,8 +158,8 @@ const Jobs: React.FC = () => {
               Chesterland Tavern
             </label>
           </form>
+          {jobResponsibilities}
         </fieldset>
-        {jobResponsibilities}
       </Wrapper>
     </div>
   );

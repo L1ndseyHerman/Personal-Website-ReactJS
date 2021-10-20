@@ -7,8 +7,17 @@
   width: 350px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 1rem;
 }
 .form {
   display: inline-grid;
   line-height: 1.5;
+}
+.dateLi {
+  font-weight: bold;
+  color: cornflowerblue;
+}
+.otherLi {
+  color: cornflowerblue;
+  padding-top: 1rem;
 }
