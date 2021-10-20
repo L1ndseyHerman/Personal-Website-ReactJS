@@ -1,0 +1,23 @@
+/*.legend {
+  text-align: center;
+}
+.label {
+  display: block;
+}*/
+.h4 {
+  text-align: center;
+}
+.fieldset {
+  border: none;
+  /*margin: 0 auto;*/
+  width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  /*display: table;
+  margin-right: auto;
+  margin-left: auto;*/
+}
+.form {
+  display: inline-grid;
+  line-height: 1.5;
+}
