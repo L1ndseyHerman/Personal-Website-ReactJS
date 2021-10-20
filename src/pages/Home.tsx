@@ -1,6 +1,4 @@
 import React from "react";
-//  Whoops, <Link /> is for ON-SITE Links only!
-//import { Link } from "react-router-dom";
 import classes from "./Home.module.css";
 
 import Wrapper from "../components/Wrapper";
@@ -49,7 +47,7 @@ const Home: React.FC = () => {
           </a>
           .
         </p>
-        <p className={classes.updatedPar}>Last updated: 10/18/21</p>
+        <p className={classes.updatedPar}>Last updated: 10/20/21</p>
       </Wrapper>
     </div>
   );
