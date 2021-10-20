@@ -5,28 +5,27 @@ import classes from "./Jobs.module.css";
 const Jobs: React.FC = () => {
   const [jobNumber, setJobNumber] = useState(0);
 
-  //const radioButtonChangeHandler = (currentJobNumber: number) => {
-  /*const radioButtonChangeHandler = (
-    event: ChangeEventHandler<HTMLInputElement>, => void
-  ) => {
-    setJobNumber(event.name);
-  };*/
-
-  /*let myAdd2: (baseValue: number, increment: number) => number = function (x, y) {
-    return x + y;
-  };*/
-
-  /*const radioButtonChangeHandler: (
-    event: ChangeEventHandler<HTMLInputElement>
-  ) => void = (event) => {
-    setJobNumber(event.name);
-  };*/
-
   const radioButtonChangeHandler: (currentJobNumber: number) => void = (
     currentJobNumber
   ) => {
     setJobNumber(currentJobNumber);
   };
+
+  let jobResponsibilities = null;
+
+  if (jobNumber === 1) {
+    jobResponsibilities = <p>One</p>;
+  } else if (jobNumber === 2) {
+    jobResponsibilities = <p>Two</p>;
+  } else if (jobNumber === 3) {
+    jobResponsibilities = <p>Three</p>;
+  } else if (jobNumber === 4) {
+    jobResponsibilities = <p>Four</p>;
+  } else if (jobNumber === 5) {
+    jobResponsibilities = <p>Five</p>;
+  } else if (jobNumber === 6) {
+    jobResponsibilities = <p>Six</p>;
+  }
 
   return (
     <div>
@@ -98,7 +97,7 @@ const Jobs: React.FC = () => {
             </label>
           </form>
         </fieldset>
-        {jobNumber}
+        {jobResponsibilities}
       </Wrapper>
     </div>
   );
