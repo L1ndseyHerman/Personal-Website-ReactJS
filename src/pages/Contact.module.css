@@ -1,9 +1,37 @@
 .link {
   color: black;
 }
+@keyframes bobGoesRight {
+  from {
+    margin-right: 65%;
+  }
+  to {
+    margin-right: 0%;
+  }
+}
 .bob {
   float: right;
   margin-top: 0.5rem;
-  margin-right: 65%;
-  /* Todo: Animate it from 65% to 0% so Bob moves to the right! */
+  animation-name: bobGoesRight;
+  animation-duration: 3s;
 }
+
+/*@keyframes moveSmiley
+{
+	from {top: 0px;}
+	to {top: 410px;}
+}
+#smiley
+{
+	height: 100px;
+	width: 100px;
+	float: right;
+	margin-right: 50px;
+	animation-name: moveSmiley;
+	animation-duration:3s;
+	position: relative;
+	animation-iteration-count: infinite;
+	animation-fill-mode: forwards;
+	animation-direction: alternate;
+	animation-timing-function: linear;
+}*/
