@@ -1,11 +1,18 @@
 import React from "react";
 import Wrapper from "../components/Wrapper";
+import classes from "./Hobbies.module.css";
 
 const Hobbies: React.FC = () => {
   return (
     <div>
       <Wrapper title="Hobbies">
-        <p>Hobbies Text</p>
+        <select id="hobbyChoices" className={classes.select}>
+          <option>Hobbies:</option>
+          <option value="music">Music</option>
+          <option value="creativeWriting">Creative Writing</option>
+          <option value="nature">Nature</option>
+          <option value="videoGames">Video Games</option>
+        </select>
       </Wrapper>
     </div>
   );
