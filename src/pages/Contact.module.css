@@ -1,3 +1,9 @@
 .link {
   color: black;
 }
+.bob {
+  float: right;
+  margin-top: 0.5rem;
+  margin-right: 65%;
+  /* Todo: Animate it from 65% to 0% so Bob moves to the right! */
+}
