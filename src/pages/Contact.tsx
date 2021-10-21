@@ -4,10 +4,6 @@ import classes from "./Contact.module.css";
 import bobImage from "./bobseventy.png";
 
 const Contact: React.FC = () => {
-  //  Whoops, I WANT the image to stick around after the animation ends, so I
-  //  was fine without React Transition Group this whole time!
-  //console.log("I'm on the DOM!");
-
   return (
     <div>
       <Wrapper title="Contact">

@@ -13,6 +13,9 @@ const Hobbies: React.FC = () => {
           <option value="nature">Nature</option>
           <option value="videoGames">Video Games</option>
         </select>
+        <div className={classes.imageDiv}>
+          <div className={classes.infoDiv}></div>
+        </div>
       </Wrapper>
     </div>
   );
