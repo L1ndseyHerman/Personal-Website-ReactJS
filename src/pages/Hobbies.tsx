@@ -14,7 +14,12 @@ const Hobbies: React.FC = () => {
           <option value="videoGames">Video Games</option>
         </select>
         <div className={classes.imageDiv}>
-          <div className={classes.infoDiv}></div>
+          <div className={classes.infoDiv}>
+            <p>
+              Some text aepwoirppaewj rtpriuwtriojgfniu joareojtnlaiurgj
+              ofksjgnalriegj
+            </p>
+          </div>
         </div>
       </Wrapper>
     </div>
