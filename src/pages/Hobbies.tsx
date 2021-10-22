@@ -11,6 +11,23 @@ const Hobbies: React.FC = () => {
     setHobby(event.target.value);
   };
 
+  let hobbyText = null;
+  let backgroundImage = classes.blueDiv;
+
+  if (hobby === "music") {
+    hobbyText = <p>Music</p>;
+    backgroundImage = classes.musicDiv;
+  } else if (hobby === "creativeWriting") {
+    hobbyText = <p>Creative Writing</p>;
+    backgroundImage = classes.writingDiv;
+  } else if (hobby === "nature") {
+    hobbyText = <p>Nature</p>;
+    backgroundImage = classes.natureDiv;
+  } else if (hobby === "videoGames") {
+    hobbyText = <p>Video Games</p>;
+    backgroundImage = classes.videogameDiv;
+  }
+
   return (
     <div>
       <Wrapper title="Hobbies">
@@ -21,16 +38,14 @@ const Hobbies: React.FC = () => {
             selectChangeHandler(event)
           }
         >
-          <option value="nothing">Hobbies:</option>
+          <option value="">Hobbies:</option>
           <option value="music">Music</option>
           <option value="creativeWriting">Creative Writing</option>
           <option value="nature">Nature</option>
           <option value="videoGames">Video Games</option>
         </select>
-        <div className={classes.imageDiv}>
-          <div className={classes.infoDiv}>
-            <p>Some text Hobby: {hobby}</p>
-          </div>
+        <div className={`${classes.blueDiv} ${backgroundImage}`}>
+          <div className={classes.infoDiv}>{hobbyText}</div>
         </div>
       </Wrapper>
     </div>
