@@ -15,16 +15,71 @@ const Hobbies: React.FC = () => {
   let backgroundImage = classes.blueDiv;
 
   if (hobby === "music") {
-    hobbyText = <p>Music</p>;
+    hobbyText = (
+      <>
+        <p>
+          I am a proud former member of the West Geauga High School Marching
+          Band, where I played the flute for all four years of high school. I
+          was also in Symphonic Band, where I made it to sixth chair flute out
+          of fourty-ish flute players by my senior year. Below are some links to
+          marching band performances I was a part of:
+        </p>
+        <p>
+          The most diffucult routine I was a part of:&nbsp;
+          <a
+            href="https://www.youtube.com/watch?v=BBV_rFQH7lw"
+            className={classes.link}
+          >
+            Video1
+          </a>
+        </p>
+        <p>
+          The most fun I ever had in marching band:&nbsp;
+          <a
+            href="https://www.youtube.com/watch?v=04JEjTd0s2Y"
+            className={classes.link}
+          >
+            Video2
+          </a>
+        </p>
+        <p>
+          And one where my face is the thumbnail for some reason:&nbsp;
+          <a
+            href="https://www.youtube.com/watch?v=BvpN3VJOfPo"
+            className={classes.link}
+          >
+            Video3
+          </a>
+        </p>
+      </>
+    );
     backgroundImage = classes.musicDiv;
   } else if (hobby === "creativeWriting") {
-    hobbyText = <p>Creative Writing</p>;
+    hobbyText = (
+      <p>
+        I enjoy reading and writing science fiction and fantasy stories. I was
+        also a part of Lakeland&apos;s student newspaper for one semester.
+        During that time, I published five articles in <u>The Lakelander</u>,
+        and one made the front page.
+      </p>
+    );
     backgroundImage = classes.writingDiv;
   } else if (hobby === "nature") {
-    hobbyText = <p>Nature</p>;
+    hobbyText = (
+      <p>
+        I enjoy getting outside and jogging, as well as going for walks in
+        parks. I also like spending time with animals, whether by observing
+        wildlife, or by cuddling up with my family&apos;s two adorable cats.
+      </p>
+    );
     backgroundImage = classes.natureDiv;
   } else if (hobby === "videoGames") {
-    hobbyText = <p>Video Games</p>;
+    hobbyText = (
+      <p>
+        I enjoy playing and coding videogames. If you have an Android phone or
+        tablet, check out my Super Mario-inspired videogame, &quot;Bob Go&quot;!
+      </p>
+    );
     backgroundImage = classes.videogameDiv;
   }
 
