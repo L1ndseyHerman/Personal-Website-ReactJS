@@ -15,8 +15,31 @@
 .musicDiv {
   background-image: url(EighthNote50ish.jpg);
 }
-.writingDiv {
-  background-image: url(IronMan50ish.jpg);
+@keyframes ironManFlies {
+  0% {
+    margin-left: 0%;
+    margin-top: 0%;
+  }
+  25% {
+    margin-left: 100%;
+    margin-top: 0%;
+  }
+  50% {
+    margin-left: 100%;
+    margin-top: 100%;
+  }
+  75% {
+    margin-left: 0%;
+    margin-top: 100%;
+  }
+  100% {
+    margin-left: 0%;
+    margin-top: 0%;
+  }
+}
+.ironMan {
+  animation-name: ironManFlies;
+  animation-duration: 10s;
 }
 .natureDiv {
   background-image: url(CartoonTree75ish.png);

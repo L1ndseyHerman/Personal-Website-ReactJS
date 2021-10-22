@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Wrapper from "../components/Wrapper";
 import classes from "./Hobbies.module.css";
+import ironMan from "./IronMan50ish.jpg";
 
 const Hobbies: React.FC = () => {
   const [hobby, setHobby] = useState("");
@@ -13,6 +14,7 @@ const Hobbies: React.FC = () => {
 
   let hobbyText = null;
   let backgroundImage = classes.blueDiv;
+  let hasIronManAnimation = false;
 
   if (hobby === "music") {
     hobbyText = (
@@ -63,7 +65,7 @@ const Hobbies: React.FC = () => {
         and one made the front page.
       </p>
     );
-    backgroundImage = classes.writingDiv;
+    hasIronManAnimation = true;
   } else if (hobby === "nature") {
     hobbyText = (
       <p>
@@ -100,6 +102,13 @@ const Hobbies: React.FC = () => {
           <option value="videoGames">Video Games</option>
         </select>
         <div className={`${classes.blueDiv} ${backgroundImage}`}>
+          {hasIronManAnimation && (
+            <img
+              src={ironMan}
+              className={classes.ironMan}
+              alt="A Flying Iron Man"
+            />
+          )}
           <div className={classes.infoDiv}>{hobbyText}</div>
         </div>
       </Wrapper>
