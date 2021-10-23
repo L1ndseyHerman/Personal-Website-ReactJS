@@ -8,22 +8,20 @@ import Cat_Dog from "../components/Cat_Dog";
 
 const JS_Skills: React.FC = () => {
   return (
-    <div>
-      <Wrapper title="JS Skills">
-        <OneJSSkillGameWrapper>
-          <RandomSentenceGenerator />
-        </OneJSSkillGameWrapper>
-        <OneJSSkillGameWrapper>
-          <CrypticCode />
-        </OneJSSkillGameWrapper>
-        <OneJSSkillGameWrapper>
-          <Wheel_lessFortune />
-        </OneJSSkillGameWrapper>
-        <OneJSSkillGameWrapper>
-          <Cat_Dog />
-        </OneJSSkillGameWrapper>
-      </Wrapper>
-    </div>
+    <Wrapper title="JS Skills">
+      <OneJSSkillGameWrapper>
+        <RandomSentenceGenerator />
+      </OneJSSkillGameWrapper>
+      <OneJSSkillGameWrapper>
+        <CrypticCode />
+      </OneJSSkillGameWrapper>
+      <OneJSSkillGameWrapper>
+        <Wheel_lessFortune />
+      </OneJSSkillGameWrapper>
+      <OneJSSkillGameWrapper>
+        <Cat_Dog />
+      </OneJSSkillGameWrapper>
+    </Wrapper>
   );
 };
 

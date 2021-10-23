@@ -3,11 +3,9 @@ import Wrapper from "../components/Wrapper";
 
 const Fake_Webpages: React.FC = () => {
   return (
-    <div>
-      <Wrapper title="Fake Webpages">
-        <p>Fake Webpages Text</p>
-      </Wrapper>
-    </div>
+    <Wrapper title="Fake Webpages">
+      <p>Fake Webpages Text</p>
+    </Wrapper>
   );
 };
 

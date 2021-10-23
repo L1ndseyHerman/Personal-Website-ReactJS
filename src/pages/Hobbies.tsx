@@ -86,33 +86,31 @@ const Hobbies: React.FC = () => {
   }
 
   return (
-    <div>
-      <Wrapper title="Hobbies">
-        <select
-          id="hobbyChoices"
-          className={classes.select}
-          onChange={(event: React.ChangeEvent<{ value: string }>) =>
-            selectChangeHandler(event)
-          }
-        >
-          <option value="">Hobbies:</option>
-          <option value="music">Music</option>
-          <option value="creativeWriting">Creative Writing</option>
-          <option value="nature">Nature</option>
-          <option value="videoGames">Video Games</option>
-        </select>
-        <div className={`${classes.blueDiv} ${backgroundImage}`}>
-          {hasIronManAnimation && (
-            <img
-              src={ironMan}
-              className={classes.ironMan}
-              alt="A Flying Iron Man"
-            />
-          )}
-          <div className={classes.infoDiv}>{hobbyText}</div>
-        </div>
-      </Wrapper>
-    </div>
+    <Wrapper title="Hobbies">
+      <select
+        id="hobbyChoices"
+        className={classes.select}
+        onChange={(event: React.ChangeEvent<{ value: string }>) =>
+          selectChangeHandler(event)
+        }
+      >
+        <option value="">Hobbies:</option>
+        <option value="music">Music</option>
+        <option value="creativeWriting">Creative Writing</option>
+        <option value="nature">Nature</option>
+        <option value="videoGames">Video Games</option>
+      </select>
+      <div className={`${classes.blueDiv} ${backgroundImage}`}>
+        {hasIronManAnimation && (
+          <img
+            src={ironMan}
+            className={classes.ironMan}
+            alt="A Flying Iron Man"
+          />
+        )}
+        <div className={classes.infoDiv}>{hobbyText}</div>
+      </div>
+    </Wrapper>
   );
 };
 
