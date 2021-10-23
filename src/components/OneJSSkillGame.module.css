@@ -1,0 +1,13 @@
+.blueDiv {
+  border: 3px solid black;
+  border-radius: 20%;
+  padding: 4rem;
+  background-color: cornflowerblue;
+  margin: 3rem;
+}
+.infoDiv {
+  border: 3px solid black;
+  border-radius: 20%;
+  padding: 3rem;
+  background-color: white;
+}
