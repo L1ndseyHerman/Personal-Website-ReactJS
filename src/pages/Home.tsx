@@ -10,12 +10,12 @@ const Home: React.FC = () => {
         <p className={classes.par}>
           Hi, welcome to my personal website! This website was originally an
           assignment for a class where I had to use HTML5, CSS3, and Vanilla
-          JavaScript to create a basic website with certain features, such as at
-          least 4 webpages, 1 table, 1 unordered list, 2 selectors
-          (radio-buttons, drop-down list, etc.), 2 animations, 2 external links,
-          and possibly other requirements. I later added a &quot;Fun With
-          JavaScript&quot; page after spending more time learning JavaScript
-          on&nbsp;
+          JavaScript (JavaScript without any frameworks like React JS) to create
+          a basic website with certain features, such as at least 4 webpages, 1
+          table, 1 unordered list, 2 selectors (radio-buttons, drop-down list,
+          etc.), 2 animations, 2 external links, and possibly other
+          requirements. I later added a &quot;Fun With JavaScript&quot; page
+          after spending more time learning JavaScript on&nbsp;
           <a
             href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/"
             className={classes.link}
@@ -47,7 +47,7 @@ const Home: React.FC = () => {
           </a>
           .
         </p>
-        <p className={classes.updatedPar}>Last updated: 10/21/21</p>
+        <p className={classes.updatedPar}>Last updated: 10/22/21</p>
       </Wrapper>
     </div>
   );
