@@ -1,15 +1,27 @@
 import React from "react";
 import Wrapper from "../components/Wrapper";
-import OneJSSkillGame from "../components/OneJSSkillGame";
+import OneJSSkillGameWrapper from "../components/OneJSSkillGameWrapper";
+import RandomSentenceGenerator from "../components/RandomSentenceGenerator";
+import CrypticCode from "../components/CrypticCode";
+import Wheel_lessFortune from "../components/Wheel_lessFortune";
+import Cat_Dog from "../components/Cat_Dog";
 
 const JS_Skills: React.FC = () => {
   return (
     <div>
       <Wrapper title="JS Skills">
-        <OneJSSkillGame />
-        <OneJSSkillGame />
-        <OneJSSkillGame />
-        <OneJSSkillGame />
+        <OneJSSkillGameWrapper>
+          <RandomSentenceGenerator />
+        </OneJSSkillGameWrapper>
+        <OneJSSkillGameWrapper>
+          <CrypticCode />
+        </OneJSSkillGameWrapper>
+        <OneJSSkillGameWrapper>
+          <Wheel_lessFortune />
+        </OneJSSkillGameWrapper>
+        <OneJSSkillGameWrapper>
+          <Cat_Dog />
+        </OneJSSkillGameWrapper>
       </Wrapper>
     </div>
   );
