@@ -1,0 +1,9 @@
+.button {
+  /* Better code for centering a button! */
+  margin: 0 auto;
+  display: block;
+  /* End of better code for centering a button. */
+  color: white;
+  background-color: cornflowerblue;
+  padding: 0.5rem;
+}
