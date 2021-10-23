@@ -1,9 +1,12 @@
 .blueDiv {
   border: 3px solid black;
   border-radius: 20%;
-  padding: 4rem;
+  padding: 2rem;
   background-color: cornflowerblue;
-  margin: 3rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 5rem;
 }
 .infoDiv {
   border: 3px solid black;
