@@ -10,8 +10,8 @@ const Contact: React.FC = () => {
         <img className={classes.bob} src={bobImage} alt="Moving Bob!" />
         <p>
           Email:&nbsp;
-          <a href="mailto:lindseyherman95@yahoo.com" className={classes.link}>
-            lindseyherman95@yahoo.com
+          <a href="mailto:lherman21@jcu.edu" className={classes.link}>
+            lherman21@jcu.edu
           </a>
         </p>
         <p>
