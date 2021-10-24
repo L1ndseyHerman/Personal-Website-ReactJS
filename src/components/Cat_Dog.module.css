@@ -1,0 +1,11 @@
+.form {
+  display: inline-grid;
+  line-height: 2;
+}
+.button {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: white;
+  background-color: cornflowerblue;
+  padding: 0.5rem;
+}

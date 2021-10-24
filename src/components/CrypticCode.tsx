@@ -42,6 +42,7 @@ const CrypticCode: React.FC = () => {
   const [encryptedText, setEncryptedText] = useState("");
 
   const encryptHandler = () => {
+    //  Darn, I'm not sure how to stop this warning :( The code works tho.
     const textToEncrypt = textToEncryptRef.current!.value;
 
     //  Don't forget u need the trim() to REALLY check the length!
