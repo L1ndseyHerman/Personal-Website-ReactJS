@@ -1,0 +1,13 @@
+.button {
+  color: white;
+  background-color: cornflowerblue;
+  padding: 0.5rem;
+}
+.input {
+  padding: 0.5rem;
+  width: 75%;
+}
+/* The encrypted string could go off the screen on cellphone sizes, this prevents that. */
+.encryptedText {
+  word-wrap: break-word;
+}
