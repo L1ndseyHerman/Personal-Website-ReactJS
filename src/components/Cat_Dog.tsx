@@ -1,13 +1,73 @@
 import React, { useState } from "react";
 import classes from "./Cat_Dog.module.css";
 
+//	Need the function, .prototype, and an instance for an object.
+const Animal = () => {
+  "speak";
+  "doTrick";
+};
+Animal.prototype = {
+  constructor: Animal,
+  speak: "Generic sound",
+  doTrick: "Shakes your hand with its paw.",
+};
+
+const Cat = () => {
+  "speak";
+  "doTrick";
+};
+Cat.prototype = Object.create(Animal.prototype);
+Cat.prototype.constructor = Cat;
+Cat.prototype.speak = "Meow.";
+Cat.prototype.doTrick = "Nope.";
+//	My irl cat's name is Huckleberry :)
+const huckleberry = Object.create(Cat.prototype);
+
+const Dog = () => {
+  "speak";
+  "doTrick";
+  "chewBone";
+};
+Dog.prototype = Object.create(Animal.prototype);
+Dog.prototype.constructor = Dog;
+//	Overriding Animal:
+Dog.prototype["speak"] = "Woof!";
+//	Not overriding Animal:
+//Dog.prototype["doTrick"] =
+//	Creating a new property:
+Dog.prototype["chewBone"] = "Yum!";
+//  I don't have a dog.
+const fido = Object.create(Dog.prototype);
+
 const Cat_Dog: React.FC = () => {
   const [isCat, setIsCat] = useState(true);
+  const [parText, setParText] = useState("");
 
   const radioButtonChangeHandler: (currentlyIsCat: boolean) => void = (
     currentlyIsCat
   ) => {
     setIsCat(currentlyIsCat);
+    setParText("");
+  };
+
+  const speakButtonHandler: () => void = () => {
+    if (isCat) {
+      setParText(huckleberry.speak);
+    } else {
+      setParText(fido["speak"]);
+    }
+  };
+
+  const trickButtonHandler: () => void = () => {
+    if (isCat) {
+      setParText(huckleberry.doTrick);
+    } else {
+      setParText(fido["doTrick"]);
+    }
+  };
+
+  const chewButtonHandler: () => void = () => {
+    setParText(fido["chewBone"]);
   };
 
   return (
@@ -37,10 +97,31 @@ const Cat_Dog: React.FC = () => {
           />
           Dog
         </label>
-        <button className={classes.button}>Speak</button>
-        <button className={classes.button}>Do a Trick</button>
-        {!isCat && <button className={classes.button}>Chew a Bone</button>}
+        <button
+          className={classes.button}
+          type="button"
+          onClick={speakButtonHandler}
+        >
+          Speak
+        </button>
+        <button
+          className={classes.button}
+          type="button"
+          onClick={trickButtonHandler}
+        >
+          Do a Trick
+        </button>
+        {!isCat && (
+          <button
+            className={classes.button}
+            type="button"
+            onClick={chewButtonHandler}
+          >
+            Chew a Bone
+          </button>
+        )}
       </form>
+      <p className={classes.par}>{parText}</p>
     </>
   );
 };
