@@ -9,14 +9,25 @@
   background-color: cornflowerblue;
   padding: 0.5rem;
 }
+.image {
+  float: right;
+  display: block;
+}
 .par {
   float: right;
-  margin-right: 50%;
+  display: block;
+  margin-top: 12rem;
 }
 
 @media only screen and (max-width: 1024px) {
+  .image {
+    float: none;
+    margin-top: 2rem;
+    width: 50%;
+    height: 50%;
+  }
   .par {
     float: none;
-    margin-right: none;
+    display: inline;
   }
 }

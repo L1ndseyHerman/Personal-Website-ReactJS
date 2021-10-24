@@ -1,5 +1,10 @@
 import React, { useState } from "react";
 import classes from "./Cat_Dog.module.css";
+import catMeowing from "./CatMeowing.png";
+import nopeGrumpyCat from "./NopeGrumpyCat.png";
+import dogBarking from "./DogBarking.png";
+import dogShakingPaws from "./DogShakingPaws.png";
+import dogChewingBone from "./DogChewingBone.png";
 
 //	Need the function, .prototype, and an instance for an object.
 const Animal = () => {
@@ -9,7 +14,7 @@ const Animal = () => {
 Animal.prototype = {
   constructor: Animal,
   speak: "Generic sound",
-  doTrick: "Shakes your hand with its paw.",
+  doTrick: "Shakes your hand.",
 };
 
 const Cat = () => {
@@ -121,6 +126,13 @@ const Cat_Dog: React.FC = () => {
           </button>
         )}
       </form>
+      {parText !== "" && (
+        <img
+          src={dogShakingPaws}
+          className={classes.image}
+          alt={dogShakingPaws}
+        />
+      )}
       <p className={classes.par}>{parText}</p>
     </>
   );
