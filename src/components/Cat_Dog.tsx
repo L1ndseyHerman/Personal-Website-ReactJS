@@ -47,6 +47,7 @@ const fido = Object.create(Dog.prototype);
 const Cat_Dog: React.FC = () => {
   const [isCat, setIsCat] = useState(true);
   const [parText, setParText] = useState("");
+  const [imageSrc, setImageSrc] = useState("");
 
   const radioButtonChangeHandler: (currentlyIsCat: boolean) => void = (
     currentlyIsCat
@@ -57,22 +58,28 @@ const Cat_Dog: React.FC = () => {
 
   const speakButtonHandler: () => void = () => {
     if (isCat) {
+      //  This should do a "batch update": only re-render once bec 2 useStates same method.
       setParText(huckleberry.speak);
+      setImageSrc(catMeowing);
     } else {
       setParText(fido["speak"]);
+      setImageSrc(dogBarking);
     }
   };
 
   const trickButtonHandler: () => void = () => {
     if (isCat) {
       setParText(huckleberry.doTrick);
+      setImageSrc(nopeGrumpyCat);
     } else {
       setParText(fido["doTrick"]);
+      setImageSrc(dogShakingPaws);
     }
   };
 
   const chewButtonHandler: () => void = () => {
     setParText(fido["chewBone"]);
+    setImageSrc(dogChewingBone);
   };
 
   return (
@@ -127,11 +134,7 @@ const Cat_Dog: React.FC = () => {
         )}
       </form>
       {parText !== "" && (
-        <img
-          src={dogShakingPaws}
-          className={classes.image}
-          alt={dogShakingPaws}
-        />
+        <img src={imageSrc} className={classes.image} alt={imageSrc} />
       )}
       <p className={classes.par}>{parText}</p>
     </>
