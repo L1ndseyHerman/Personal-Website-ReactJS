@@ -20,11 +20,39 @@ const In_GameWheel_lessFortune: React.FC<{
     const hasOnlyOneLower = inputString.match(regex);
     if (hasOnlyOneLower) {
       setInputHasError(false);
-      //checkIfLetterInWord(inputString);
-      props.clickHandler({ wonThisTurn: true, lostThisTurn: false });
+      checkIfLetterInWord(inputString);
     } else {
       setInputHasError(true);
     }
+  };
+
+  const checkIfLetterInWord = (inputString: string) => {
+    for (let index = 0; index < theAnswer.length; index++) {
+      //  Remember, the inputString should only ever be one letter:
+      if (theAnswer[index] === inputString[0]) {
+        //foundArray[index] = theAnswer[index];
+        props.clickHandler({ wonThisTurn: true, lostThisTurn: false });
+      }
+    }
+
+    //	/2 bec gap between each blank
+    //createBlankArray(blanksOutsideFunction.length/2);
+
+    //guessesLeft--;
+    //    What's the syntax for the previous useState() value again?
+    /*setExpenses((prevExpenses) => {
+        return [expense, ...expenses];
+      });*/
+    setGuessesLeft((prevNumberOfGuesses) => {
+      return prevNumberOfGuesses - 1;
+    });
+
+    //setGuessesLeft(guessesLeft.)
+    //document.querySelector("#guessesLeft").textContent = "Guesses Left: " + guessesLeft;
+    //checkWin();
+    //checkLoose();
+    //guessBox.value = "";
+    guessRef.current!.value = "";
   };
 
   return (
