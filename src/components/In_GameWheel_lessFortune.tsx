@@ -13,8 +13,7 @@ const In_GameWheel_lessFortune: React.FC<{
   const theAnswer = "cat";
   const guessRef = useRef<HTMLInputElement>(null);
 
-  //	Makes sure the input is just one lower-case letter.
-  const checkInputForErrors = () => {
+  const checkInputForOneLowercaseLetter = () => {
     const inputString = guessRef.current!.value;
     //	Makes sure the letter is both the start and the end of the regex, meaning nothing else can be there.
     const regex = /^[a-z]$/;
@@ -30,13 +29,22 @@ const In_GameWheel_lessFortune: React.FC<{
 
   return (
     <>
-      <input type="text" ref={guessRef} />
-      <button className={classes.button} onClick={checkInputForErrors}>
+      <input type="text" ref={guessRef} className={classes.input} />
+      <button
+        className={classes.button}
+        onClick={checkInputForOneLowercaseLetter}
+      >
         Guess A Letter
       </button>
-      {inputHasError && <p>Please guess one lower-case letter at a time.</p>}
-      <p>{whatYouSolvedSoFar}</p>
-      <p>Guesses left: {guessesLeft}</p>
+      <button className={classes.buttonRight}>Solve the Puzzle</button>
+      <input type="text" className={classes.inputRight} />
+      {inputHasError && (
+        <p className={classes.par}>
+          Please guess one lower-case letter at a time.
+        </p>
+      )}
+      <p className={classes.par}>{whatYouSolvedSoFar}</p>
+      <p className={classes.par}>Guesses left: {guessesLeft}</p>
     </>
   );
 };

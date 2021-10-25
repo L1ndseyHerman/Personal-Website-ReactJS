@@ -3,3 +3,31 @@
   background-color: cornflowerblue;
   padding: 0.5rem;
 }
+.buttonRight {
+  color: white;
+  background-color: cornflowerblue;
+  padding: 0.5rem;
+  float: right;
+}
+.input {
+  padding: 0.5rem;
+  width: 2rem;
+}
+.inputRight {
+  padding: 0.5rem;
+  float: right;
+}
+.par {
+  text-align: center;
+}
+
+@media only screen and (max-width: 1024px) {
+  .buttonRight {
+    float: none;
+    display: block;
+    margin-top: 2rem;
+  }
+  .inputRight {
+    float: none;
+  }
+}
