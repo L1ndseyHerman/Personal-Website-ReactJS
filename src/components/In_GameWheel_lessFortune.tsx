@@ -15,7 +15,8 @@ const In_GameWheel_lessFortune: React.FC<{
 
   const checkInputForOneLowercaseLetter = () => {
     const inputString = guessRef.current!.value;
-    //	Makes sure the letter is both the start and the end of the regex, meaning nothing else can be there.
+    //	Makes sure the letter is both the start and the end of the regex,
+    //  meaning nothing else can be there.
     const regex = /^[a-z]$/;
     const hasOnlyOneLower = inputString.match(regex);
     if (hasOnlyOneLower) {
@@ -30,14 +31,18 @@ const In_GameWheel_lessFortune: React.FC<{
     for (let index = 0; index < theAnswer.length; index++) {
       //  Remember, the inputString should only ever be one letter:
       if (theAnswer[index] === inputString[0]) {
-        //foundArray[index] = theAnswer[index];
-
         //  JS way to turn each char in a string into an array index:
         const arrayToChange = whatYouSolvedSoFar.split("");
         //  * 2 bec of the blanks and spaces:
         arrayToChange[index * 2] = inputString[0];
         //  And back to a string:
         setWhatYouSolvedSoFar(arrayToChange.join(""));
+
+        //  Check if you won, needs to be arrayToChange not the
+        //  whatYouSolvedSoFar useState() bec batch updates:
+        if (arrayToChange.indexOf("_") === -1) {
+          props.clickHandler({ wonThisTurn: true, lostThisTurn: false });
+        }
       }
     }
 
@@ -52,8 +57,6 @@ const In_GameWheel_lessFortune: React.FC<{
       }
       return prevNumberOfGuesses - 1;
     });
-
-    //checkWin();
 
     guessRef.current!.value = "";
   };
