@@ -5,12 +5,16 @@ type ThisTurnSettings = { wonThisTurn: boolean; lostThisTurn: boolean };
 
 const In_GameWheel_lessFortune: React.FC<{
   clickHandler: ({ wonThisTurn, lostThisTurn }: ThisTurnSettings) => void;
+  theAnswer: string;
+  numGuesses: number;
+  blanksString: string;
 }> = (props) => {
-  //  Hard-coding the easy amounts for now:
-  const [whatYouSolvedSoFar, setWhatYouSolvedSoFar] = useState("_ _ _ ");
-  const [guessesLeft, setGuessesLeft] = useState(12);
+  const [whatYouSolvedSoFar, setWhatYouSolvedSoFar] = useState(
+    props.blanksString
+  );
+  const [guessesLeft, setGuessesLeft] = useState(props.numGuesses);
   const [inputHasError, setInputHasError] = useState(false);
-  const theAnswer = "cat";
+  const theAnswer = props.theAnswer;
   const guessRef = useRef<HTMLInputElement>(null);
   const solveRef = useRef<HTMLInputElement>(null);
 
@@ -29,26 +33,25 @@ const In_GameWheel_lessFortune: React.FC<{
   };
 
   const checkIfLetterInWord = (inputString: string) => {
+    //  JS way to turn each char in a string into an array index:
+    const arrayToChange = whatYouSolvedSoFar.split("");
+
     for (let index = 0; index < theAnswer.length; index++) {
       //  Remember, the inputString should only ever be one letter:
       if (theAnswer[index] === inputString[0]) {
-        //  JS way to turn each char in a string into an array index:
-        const arrayToChange = whatYouSolvedSoFar.split("");
         //  * 2 bec of the blanks and spaces:
         arrayToChange[index * 2] = inputString[0];
-        //  And back to a string:
-        setWhatYouSolvedSoFar(arrayToChange.join(""));
-
-        //  Check if you won, needs to be arrayToChange not the
-        //  whatYouSolvedSoFar useState() bec batch updates:
-        if (arrayToChange.indexOf("_") === -1) {
-          props.clickHandler({ wonThisTurn: true, lostThisTurn: false });
-        }
       }
     }
 
-    //	/2 bec gap between each blank
-    //createBlankArray(blanksOutsideFunction.length/2);
+    //  And back to a string:
+    setWhatYouSolvedSoFar(arrayToChange.join(""));
+
+    //  Check if you won, needs to be arrayToChange not the
+    //  whatYouSolvedSoFar useState() bec batch updates:
+    if (arrayToChange.indexOf("_") === -1) {
+      props.clickHandler({ wonThisTurn: true, lostThisTurn: false });
+    }
 
     setGuessesLeft((prevNumberOfGuesses) => {
       //  This if-check needs to be here bec will be 1 behind in a seperate function

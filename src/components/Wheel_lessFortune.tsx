@@ -49,8 +49,29 @@ const Wheel_lessFortune: React.FC = () => {
       {!inGame && !lost && !won && (
         <EasyMeduimHardButtons clickHandler={easyMediumHardClickHandler} />
       )}
-      {inGame && (
-        <In_GameWheel_lessFortune clickHandler={thisTurnClickHandler} />
+      {inGame && difficulty === "easy" && (
+        <In_GameWheel_lessFortune
+          clickHandler={thisTurnClickHandler}
+          theAnswer="cat"
+          numGuesses={12}
+          blanksString="_ _ _ "
+        />
+      )}
+      {inGame && difficulty === "medium" && (
+        <In_GameWheel_lessFortune
+          clickHandler={thisTurnClickHandler}
+          theAnswer="jogging"
+          numGuesses={14}
+          blanksString="_ _ _ _ _ _ _ "
+        />
+      )}
+      {inGame && difficulty === "hard" && (
+        <In_GameWheel_lessFortune
+          clickHandler={thisTurnClickHandler}
+          theAnswer="coronavirus"
+          numGuesses={11}
+          blanksString="_ _ _ _ _ _ _ _ _ _ _ "
+        />
       )}
       {!inGame && lost && (
         <WinLooseTextButton
