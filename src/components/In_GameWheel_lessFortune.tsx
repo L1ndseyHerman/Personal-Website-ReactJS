@@ -38,22 +38,26 @@ const In_GameWheel_lessFortune: React.FC<{
     //	/2 bec gap between each blank
     //createBlankArray(blanksOutsideFunction.length/2);
 
-    //guessesLeft--;
-    //    What's the syntax for the previous useState() value again?
-    /*setExpenses((prevExpenses) => {
-        return [expense, ...expenses];
-      });*/
     setGuessesLeft((prevNumberOfGuesses) => {
+      //  This if-check needs to be here bec will be 1 behind in a seperate function
+      //  due to batch updates!
+      if (prevNumberOfGuesses === 1) {
+        props.clickHandler({ wonThisTurn: false, lostThisTurn: true });
+      }
       return prevNumberOfGuesses - 1;
     });
 
-    //setGuessesLeft(guessesLeft.)
-    //document.querySelector("#guessesLeft").textContent = "Guesses Left: " + guessesLeft;
     //checkWin();
     //checkLoose();
-    //guessBox.value = "";
+
     guessRef.current!.value = "";
   };
+
+  /*const checkLoose = () => {
+    if (guessesLeft <= 0) {
+      props.clickHandler({ wonThisTurn: false, lostThisTurn: true });
+    }
+  };*/
 
   return (
     <>
