@@ -31,7 +31,13 @@ const In_GameWheel_lessFortune: React.FC<{
       //  Remember, the inputString should only ever be one letter:
       if (theAnswer[index] === inputString[0]) {
         //foundArray[index] = theAnswer[index];
-        props.clickHandler({ wonThisTurn: true, lostThisTurn: false });
+
+        //  JS way to turn each char in a string into an array index:
+        const arrayToChange = whatYouSolvedSoFar.split("");
+        //  * 2 bec of the blanks and spaces:
+        arrayToChange[index * 2] = inputString[0];
+        //  And back to a string:
+        setWhatYouSolvedSoFar(arrayToChange.join(""));
       }
     }
 
@@ -48,16 +54,9 @@ const In_GameWheel_lessFortune: React.FC<{
     });
 
     //checkWin();
-    //checkLoose();
 
     guessRef.current!.value = "";
   };
-
-  /*const checkLoose = () => {
-    if (guessesLeft <= 0) {
-      props.clickHandler({ wonThisTurn: false, lostThisTurn: true });
-    }
-  };*/
 
   return (
     <>
