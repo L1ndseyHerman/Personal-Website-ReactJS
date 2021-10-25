@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import EasyMeduimHardButtons from "./EasyMediumHardButtons";
+import WinLooseTextButton from "./WinLooseTextButton";
 
 const Wheel_lessFortune: React.FC = () => {
   const [inGame, setInGame] = useState(false);
@@ -10,9 +11,15 @@ const Wheel_lessFortune: React.FC = () => {
   const easyMediumHardClickHandler: (thisGamesDifficulty: string) => void = (
     thisGamesDifficulty
   ) => {
-    setInGame(true);
+    //setInGame(true);
     setDifficulty(thisGamesDifficulty);
+    setLost(true);
     console.log(thisGamesDifficulty);
+  };
+
+  const playAgainClickHandler: () => void = () => {
+    setWon(false);
+    setLost(false);
   };
 
   return (
@@ -23,8 +30,20 @@ const Wheel_lessFortune: React.FC = () => {
         Comes in three difficulties, although the hard one might not be as
         difficult as you think....
       </p>
-      {!inGame && (
+      {!inGame && !lost && !won && (
         <EasyMeduimHardButtons clickHandler={easyMediumHardClickHandler} />
+      )}
+      {!inGame && lost && (
+        <WinLooseTextButton
+          winLooseText="lost."
+          clickHandler={playAgainClickHandler}
+        />
+      )}
+      {!inGame && won && (
+        <WinLooseTextButton
+          winLooseText="won!"
+          clickHandler={playAgainClickHandler}
+        />
       )}
     </>
   );
