@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import EasyMeduimHardButtons from "./EasyMediumHardButtons";
+import In_GameWheel_lessFortune from "./In_GameWheel_lessFortune";
 import WinLooseTextButton from "./WinLooseTextButton";
 
 const Wheel_lessFortune: React.FC = () => {
@@ -11,10 +12,25 @@ const Wheel_lessFortune: React.FC = () => {
   const easyMediumHardClickHandler: (thisGamesDifficulty: string) => void = (
     thisGamesDifficulty
   ) => {
-    //setInGame(true);
+    setInGame(true);
     setDifficulty(thisGamesDifficulty);
-    setLost(true);
     console.log(thisGamesDifficulty);
+  };
+
+  type ThisTurnSettings = { wonThisTurn: boolean; lostThisTurn: boolean };
+
+  const thisTurnClickHandler: ({
+    wonThisTurn,
+    lostThisTurn,
+  }: ThisTurnSettings) => void = ({ wonThisTurn, lostThisTurn }) => {
+    setWon(wonThisTurn);
+    setLost(lostThisTurn);
+
+    //  This has to be wonThisTurn not won, bec the if-statement isn't caught up to
+    //  the batch update!
+    if (wonThisTurn || lostThisTurn) {
+      setInGame(false);
+    }
   };
 
   const playAgainClickHandler: () => void = () => {
@@ -32,6 +48,9 @@ const Wheel_lessFortune: React.FC = () => {
       </p>
       {!inGame && !lost && !won && (
         <EasyMeduimHardButtons clickHandler={easyMediumHardClickHandler} />
+      )}
+      {inGame && (
+        <In_GameWheel_lessFortune clickHandler={thisTurnClickHandler} />
       )}
       {!inGame && lost && (
         <WinLooseTextButton
