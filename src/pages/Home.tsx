@@ -30,10 +30,7 @@ const Home: React.FC = () => {
         </a>
         , I decided to redo this website in React JS with better CSS as well. My
         old website can be found here:&nbsp;
-        <a
-          href="https://github.com/L1ndseyHerman/Website-Updates"
-          className={classes.link}
-        >
+        <a href="https://l1ndseyherman.github.io/" className={classes.link}>
           github.com
         </a>
         . Also, check out my basic React JS videogame that is a PWA and hosted
