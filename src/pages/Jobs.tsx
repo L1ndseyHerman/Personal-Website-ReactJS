@@ -96,7 +96,7 @@ const Jobs: React.FC = () => {
           <legend className={classes.legend}>
             Select a Job to Learn More About it:
           </legend>
-          <label htmlFor="Boyd">
+          <label htmlFor="Boyd" className={classes.restOfTheText}>
             <input
               id="Boyd"
               type="radio"
@@ -106,7 +106,7 @@ const Jobs: React.FC = () => {
             />
             Boyd Watterson Asset Manangement
           </label>
-          <label htmlFor="Eagle">
+          <label htmlFor="Eagle" className={classes.restOfTheText}>
             <input
               id="Eagle"
               type="radio"
@@ -116,7 +116,7 @@ const Jobs: React.FC = () => {
             />
             Giant Eagle
           </label>
-          <label htmlFor="Health">
+          <label htmlFor="Health" className={classes.restOfTheText}>
             <input
               id="Health"
               type="radio"
@@ -126,7 +126,7 @@ const Jobs: React.FC = () => {
             />
             Lake Health
           </label>
-          <label htmlFor="Sears">
+          <label htmlFor="Sears" className={classes.restOfTheText}>
             <input
               id="Sears"
               type="radio"
@@ -136,7 +136,7 @@ const Jobs: React.FC = () => {
             />
             Sears
           </label>
-          <label htmlFor="Pizza">
+          <label htmlFor="Pizza" className={classes.restOfTheText}>
             <input
               id="Pizza"
               type="radio"
@@ -146,7 +146,7 @@ const Jobs: React.FC = () => {
             />
             Pizza Hut
           </label>
-          <label htmlFor="Tavern">
+          <label htmlFor="Tavern" className={classes.restOfTheText}>
             <input
               id="Tavern"
               type="radio"

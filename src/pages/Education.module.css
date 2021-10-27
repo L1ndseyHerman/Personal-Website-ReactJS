@@ -15,12 +15,12 @@
 @media only screen and (max-width: 1024px) {
   .table {
     font-size: 70%;
-    padding: 1.5rem;
+    padding: 1rem;
     border: 2px solid black;
   }
   .td {
     font-size: 70%;
-    padding: 0.5rem;
+    padding: 0.25rem;
     font-weight: bold;
     border: 1px solid black;
   }

@@ -25,6 +25,16 @@
     margin-top: 0%;
   }
 }
+@keyframes ironManFliesPhone {
+  0% {
+    margin-left: 0%;
+    margin-top: 0%;
+  }
+  100% {
+    margin-left: 85%;
+    margin-top: 0%;
+  }
+}
 .ironMan {
   margin-bottom: 3rem;
   animation-name: ironManFlies;
@@ -55,5 +65,11 @@
   }
   .ironMan {
     animation-duration: 2s;
+  }
+  .blueDiv {
+    padding: 2rem;
+  }
+  .ironMan {
+    animation-name: ironManFliesPhone;
   }
 }

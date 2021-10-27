@@ -21,3 +21,21 @@
   color: cornflowerblue;
   padding-top: 1rem;
 }
+.restOfTheText {
+  font-size: 100%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .legend {
+    font-size: 75%;
+  }
+  .dateLi {
+    font-size: 75%;
+  }
+  .otherLi {
+    font-size: 75%;
+  }
+  .restOfTheText {
+    font-size: 75%;
+  }
+}
